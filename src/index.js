@@ -9,7 +9,7 @@ window.ferosetup = () => {
 };
 
 window.feroAlert = () => {
-  alert("he's back!");
+  alert("he's back again!");
 };
 
 ferosetup();
