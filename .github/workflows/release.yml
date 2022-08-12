@@ -5,12 +5,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
     - name: Create a Release
-      uses: elgohr/Github-Release-Action@v4
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-      with:
-        title: nightly
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_HOST: dhuey/ferosys/
+      run: gh release delete nightly -y
+      run: gh release create nightly -t "Nightly"
+
