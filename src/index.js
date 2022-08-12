@@ -8,4 +8,10 @@ window.ferosetup = () => {
   console.log("we made it");
 };
 
+window.feroAlert = () => {
+  alert("he's back!");
+};
+
 ferosetup();
+
+feroAlert();
