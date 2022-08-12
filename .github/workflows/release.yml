@@ -12,6 +12,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GH_HOST: dhuey/ferosys/
-      run: gh release delete nightly -y
-      run: gh release create nightly -t "Nightly"
+      run: |
+        gh release delete nightly -y
+        gh release create nightly -t "Nightly"
 
